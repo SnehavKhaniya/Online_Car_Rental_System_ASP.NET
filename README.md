@@ -73,19 +73,20 @@ for new user you have to sign up using name, address, password and phone no.
 
 for already exist user, need to login.
 
--> user can see available cars and book them.(There is Dummy PAYMENT system)
+-> user can see available cars and book them.(There is Dummy PAYMENT system) <br />
 
 -> in Your Rentals page user can see their rents until now rented.
 
 *
 for Admin,
 Admin have to login using hard-coded username and password.
+-
+-Name: Admin     <br />
+-Password: Admin
+-
 
-Name: Admin
-Password: Admin
+-> Admin can do CRUD operations on Cars and Customers <br />
 
--> Admin can do CRUD operations on Cars and Customers
+-> Admin can Return back a returned car and apply fine according to delay in returning a car. <br />
 
--> Admin can Return back a returned car and apply fine according to delay in returning a car.
-
--> Admin can see All Rented & Returned Cars.
+-> Admin can see All Rented & Returned Cars. <br />
