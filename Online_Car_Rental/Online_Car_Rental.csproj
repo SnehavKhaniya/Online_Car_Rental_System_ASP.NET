@@ -1,0 +1,310 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C52FA683-C180-4A6F-8E6E-0BE40DA28D24}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Online_Car_Rental</RootNamespace>
+    <AssemblyName>Online_Car_Rental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44331</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\CarRental.mdf" />
+    <Content Include="App_Data\CarRentalDB.mdf" />
+    <Content Include="App_Data\CarRentalDB_log.ldf">
+      <DependentUpon>CarRentalDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\CarRental_log.ldf">
+      <DependentUpon>CarRental.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\newdatabase.mdf" />
+    <Content Include="App_Data\newdatabase_log.ldf">
+      <DependentUpon>newdatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assets\img\ALTROZ.jpg" />
+    <Content Include="Assets\img\AURA.png" />
+    <Content Include="Assets\img\Cars.png" />
+    <Content Include="Assets\img\CRETA.png" />
+    <Content Include="Assets\img\Customer.png" />
+    <Content Include="Assets\img\GLS.png" />
+    <Content Include="Assets\img\login_1.png" />
+    <Content Include="Assets\img\mclean.jpg" />
+    <Content Include="Assets\img\new_car.jpg" />
+    <Content Include="Assets\img\Q5.png" />
+    <Content Include="Assets\img\return.jpg" />
+    <Content Include="Assets\img\THAR.png" />
+    <Content Include="Assets\img\TIGOR.png" />
+    <Content Include="Assets\img\X1.png" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\Libraries\css\bootstrap.css" />
+    <Content Include="Assets\Libraries\css\bootstrap.min.css" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.min.js" />
+    <Content Include="Pikaday-master\.gitattributes" />
+    <Content Include="Pikaday-master\.gitignore" />
+    <Content Include="Pikaday-master\css\pikaday.css" />
+    <Content Include="Pikaday-master\css\site.css" />
+    <Content Include="Pikaday-master\css\theme.css" />
+    <Content Include="Pikaday-master\css\triangle.css" />
+    <Content Include="Pikaday-master\examples\amd.html" />
+    <Content Include="Pikaday-master\examples\aria-label.html" />
+    <Content Include="Pikaday-master\examples\bound-container.html" />
+    <Content Include="Pikaday-master\examples\calendars.html" />
+    <Content Include="Pikaday-master\examples\container.html" />
+    <Content Include="Pikaday-master\examples\date-fns.html" />
+    <Content Include="Pikaday-master\examples\date-range.html" />
+    <Content Include="Pikaday-master\examples\daysInNextMonth.html" />
+    <Content Include="Pikaday-master\examples\diableDayFn.html" />
+    <Content Include="Pikaday-master\examples\jquery-amd.html" />
+    <Content Include="Pikaday-master\examples\jquery.html" />
+    <Content Include="Pikaday-master\examples\moment.html" />
+    <Content Include="Pikaday-master\examples\pick-whole-week.html" />
+    <Content Include="Pikaday-master\examples\position-css-classes.html" />
+    <Content Include="Pikaday-master\examples\positions.html" />
+    <Content Include="Pikaday-master\examples\screenshot.png" />
+    <Content Include="Pikaday-master\examples\theme.html" />
+    <Content Include="Pikaday-master\examples\trigger.html" />
+    <Content Include="Pikaday-master\examples\weeknumbers.html" />
+    <Content Include="Pikaday-master\index.html" />
+    <Content Include="Pikaday-master\pikaday.js" />
+    <Content Include="Pikaday-master\plugins\pikaday.jquery.js" />
+    <Content Include="Pikaday-master\tests\methods.js" />
+    <Content Include="Pikaday-master\tests\module.js" />
+    <Content Include="View\Admin\Cars.aspx" />
+    <Content Include="View\Admin\Customers.aspx" />
+    <Content Include="View\Admin\Home.aspx" />
+    <Content Include="View\Admin\Rents.aspx" />
+    <Content Include="View\Admin\Returns.aspx" />
+    <Content Include="View\Customer\Cars.aspx" />
+    <Content Include="View\Customer\Payment.aspx" />
+    <Content Include="View\Customer\PendingRentals.aspx" />
+    <Content Include="View\Login.aspx" />
+    <Content Include="View\SignUp.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Functions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Rents.aspx.cs">
+      <DependentUpon>Rents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Rents.aspx.designer.cs">
+      <DependentUpon>Rents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Returns.aspx.cs">
+      <DependentUpon>Returns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Returns.aspx.designer.cs">
+      <DependentUpon>Returns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\CustomerMaster.Master.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\CustomerMaster.Master.designer.cs">
+      <DependentUpon>CustomerMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\PendingRentals.aspx.cs">
+      <DependentUpon>PendingRentals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Customer\PendingRentals.aspx.designer.cs">
+      <DependentUpon>PendingRentals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Libraries\css\bootstrap-grid.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap.min.css.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.min.js.map" />
+    <None Include="packages.config" />
+    <Content Include="View\Admin\AdminMaster.Master" />
+    <Content Include="View\Customer\CustomerMaster.Master" />
+    <Content Include="Pikaday-master\.editorconfig" />
+    <Content Include="Pikaday-master\.jshintrc" />
+    <Content Include="Pikaday-master\.npmignore" />
+    <Content Include="Pikaday-master\bower.json" />
+    <Content Include="Pikaday-master\CHANGELOG.md" />
+    <Content Include="Pikaday-master\CNAME" />
+    <Content Include="Pikaday-master\component.json" />
+    <Content Include="Pikaday-master\LICENSE" />
+    <Content Include="Pikaday-master\package-lock.json" />
+    <Content Include="Pikaday-master\package.json" />
+    <Content Include="Pikaday-master\README.md" />
+    <Content Include="Pikaday-master\scss\pikaday.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\CSS\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61379</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44331/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
