@@ -12,7 +12,7 @@ ASP.NET with C# project
 ![image](https://github.com/SnehavKhaniya/Online_Car_Rental_System_ASP.NET/assets/138969953/006405f2-0fcf-4cd2-8ec0-dd6810956b31)
 
 ***
-DataBase files -> goes inside App_Data folder's SQL server Database 
+DataBase tables files -> goes inside App_Data folder's SQL server Database 
 
 *CarTb1:
 CREATE TABLE [dbo].[CarTb1] (
@@ -74,14 +74,18 @@ for new user you have to sign up using name, address, password and phone no.
 for already exist user, need to login.
 
 -> user can see available cars and book them.(There is Dummy PAYMENT system)
+
 -> in Your Rentals page user can see their rents until now rented.
 
 *
 for Admin,
 Admin have to login using hard-coded username and password.
+
 Name: Admin
 Password: Admin
 
 -> Admin can do CRUD operations on Cars and Customers
+
 -> Admin can Return back a returned car and apply fine according to delay in returning a car.
+
 -> Admin can see All Rented & Returned Cars.
